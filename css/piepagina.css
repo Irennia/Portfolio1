@@ -1,0 +1,33 @@
+footer {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5% !important;
+  background-color: #393838;
+  color: #ebebeb;
+  text-align: center;
+}
+
+.miPie {
+    margin-top: 0.7%;
+    margin-left: 30%;
+    float: left;
+    font-size: 14px;
+}
+
+.miotroPie {
+    float: right;
+    margin-top: 0.7%;
+    margin-right: 30%;
+    font-size: 14px;
+}
+
+.miotroPie a {
+    text-decoration: none !important;
+    color: #ebebeb !important;
+}
+
+.miotroPie a:hover {
+    color: #a5a1a1 !important;
+}

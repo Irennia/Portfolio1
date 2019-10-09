@@ -1,0 +1,10 @@
+a {
+    color: aliceblue !important;
+    text-decoration: none !important;
+}
+
+.miContenedor {
+    margin-left: 10%;
+    margin-top: 12%;
+    width: 80%;
+}
