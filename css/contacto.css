@@ -1,0 +1,35 @@
+.container{
+    margin-top: 5%;
+    width: 30% !important;
+    color: black;
+    margin-left: 35%;
+}
+
+form {
+    padding: 5%;
+    padding-left: 15%;
+    line-height: 35px;
+    background-color: #b2b2b2;
+}
+
+h4 {
+    margin-bottom: 8% !important;
+    text-align: center;
+    padding: 4%;
+    font-size: 30px;
+    font-weight: bold !important;
+}
+
+input.form-control {
+    width: 90%;
+}
+
+textarea {
+    width: 90% !important;
+    height: 70%;
+}
+
+button{
+    margin-top: 10px !important;
+    margin-bottom: 5px !important;
+}
