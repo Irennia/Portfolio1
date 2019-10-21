@@ -6,33 +6,40 @@
     <link rel="stylesheet" type="text/css" href="css/header-body.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/piepagina.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/contacto.css" media="screen">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 </head>
 <body>
     <nav>
-       <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
+       <ul class="navbar justify-content-center">
+          <li class="navbar-item">
+            <a class="navbar-link active" href="index.html">Inicio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="portfolio.html">Portfolio</a>
+          <li class="navbar-item">
+            <a class="navbar-link" href="portfolio.html">Portfolio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="presupuesto.html">Presupuesto</a>
+          <li class="navbar-item">
+            <a class="navbar-link" href="presupuesto.html">Presupuesto</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+          <li class="navbar-item">
+            <a class="navbar-link" href="contacto.html">Contacto</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="dondeEstamos.html">¿Dónde Estamos?</a>
+          <li class="navbar-item">
+            <a class="navbar-link" href="dondeEstamos.html">¿Dónde Estamos?</a>
           </li>
         </ul>
     </nav>
-    <div class="container">
-       <h4>AÑADIR SECCIÓN CONTACTO DATOS EMPRESA</h4>
-        <h4>Datos de contacto del cliente</h4>
-         <form>
+
+    <div id='contenedorContacto'>
+        <div class="formulario text-center">
+          <a href="" class="btn btn-danger" data-toggle="modal" data-target="#modalContactForm">
+            ¡Deja tu propuesta!</a>
+        </div>
+    <!--
+        <div class="formulario">
+            <h4>Datos de contacto del cliente</h4>
+             <form>
               <div class="form-group">
                 <label>Nombre</label>
                 <input type="text" class="form-control" id="nombre" placeholder="Introduzca su Nombre" required>
@@ -62,9 +69,67 @@
                 <label class="form-check-label" for="exampleCheck1">Acepto la Política de privacidad</label>
               </div>
               <button type="submit" class="btn btn-secondary">Enviar</button>
-        </form>
+            </form>
+        </div>
+-->
+        <div class='informacion'>
+          <hr>
+          <hr>
+          <hr>
+           <p>Irene Álvarez-Nava González</p>
+           <hr style="width: 50%; height: 3px; background-color: aliceblue;">
+           <p class="p">Análisis de Datos y Desarrollo Web
+           <p class="p">junto o separado</p>
+           <p class="p">no dudes en preguntar!</p>
+           <hr>
+          <hr>
+          <hr>
+        </div>
     </div>
-    <footer>
+    
+    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                  <i class="fas fa-user prefix grey-text"></i>
+                  <input type="text" id="form34" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="form34">Your name</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <i class="fas fa-envelope prefix grey-text"></i>
+                  <input type="email" id="form29" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="form29">Your email</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <i class="fas fa-tag prefix grey-text"></i>
+                  <input type="text" id="form32" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="form32">Subject</label>
+                </div>
+
+                <div class="md-form">
+                  <i class="fas fa-pencil prefix grey-text"></i>
+                  <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+                  <label data-error="wrong" data-success="right" for="form8">Your message</label>
+                </div>
+
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-unique">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+    <footer class="navbar-fixed-bottom">
         <p class="miPie">Irene Álvarez-Nava González</p>
         <p class="miotroPie">2018 &nbsp;&nbsp;| &nbsp;&nbsp;<a href="#">Politica de Privacidad</a> &nbsp;<a href="#">Terminos y condiciones</a></p>
     </footer>

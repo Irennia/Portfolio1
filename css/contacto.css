@@ -1,10 +1,49 @@
-.container{
-    margin-top: 5%;
-    width: 30% !important;
-    color: black;
-    margin-left: 35%;
+#contenedorContacto{
+    width: 100%;
 }
 
+.informacion{
+    
+    border-radius: 5%;
+    background-color: #292f2f;
+    width: 30% !important;
+    height: 350px;
+    float: left;
+    margin-top: 15%;
+    margin-left: 10%;
+
+}
+
+.informacion p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.informacion p.p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.formulario{
+    margin-top: 23%;
+    margin-right: 15%;
+    width: 40% !important;
+    color: black;
+    float: right;
+}
+
+.formulario a{
+    
+    padding-top: 12px;
+    height: 50px;
+    width: 350px;
+    font-size: 18px;
+}
+
+/*
 form {
     padding: 5%;
     padding-left: 15%;
@@ -32,4 +71,4 @@ textarea {
 button{
     margin-top: 10px !important;
     margin-bottom: 5px !important;
-}
+}*/

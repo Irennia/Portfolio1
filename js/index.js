@@ -1,11 +1,17 @@
+// Mensaje bienvenida página
 
-$("#contenedor").html('index.html');
+//$("#contenedor").html('index.html');
+//
+//function llamarAlert() {
+//        alert("Bienvenido a mi Portfolio!")
+//    }
+//    
+//
+//$(document).ready(function(){
+//    setTimeout(function(){llamarAlert()}, 5000)});
 
-function llamarAlert() {
-        alert("Bienvenido a mi Portfolio!")
-    }
-    
+//Modal portfolio
 
-$(document).ready(function(){
-    setTimeout(function(){llamarAlert()}, 5000)});
-
+$('#modalPosicionamiento').on('shown.bs.modalPosicionamiento', function () {
+  $('#modalPosicionamiento').trigger('focus')
+})

@@ -6,25 +6,43 @@
         <link rel="stylesheet" type="text/css" href="css/header-body.css" media="screen">
         <link rel="stylesheet" type="text/css" href="css/portfolio.css" media="screen">
         <link rel="stylesheet" type="text/css" href="css/piepagina.css" media="screen">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <style>
+            body.modal-open .miContenedor{
+                -webkit-filter: blur(7px);
+                -moz-filter: blur(15px);
+                -o-filter: blur(15px);
+                -ms-filter: blur(15px);
+                filter: blur(15px);
+            }
+  
+            .modal-backdrop {background: #f7f7f7;}
+
+            .close {
+                font-size: 50px;
+                display:block;
+            }
+       </style>
     </head>
     <body>
       <nav>
-       <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
+       <ul class="navbar justify-content-center">
+          <li class="navbar-item">
+            <a class="navbar-link active" href="index.html">Inicio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="portfolio.html">Portfolio</a>
+          <li class="navbar-item">
+            <a class="navbar-link" href="portfolio.html">Portfolio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="presupuesto.html">Presupuesto</a>
+          <li class="navbar-item">
+            <a class="navbar-link" href="presupuesto.html">Presupuesto</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+          <li class="navbar-item">
+            <a class="navbar-link" href="contacto.html">Contacto</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="dondeEstamos.html">¿Dónde Estamos?</a>
+          <li class="navbar-item">
+            <a class="navbar-link" href="dondeEstamos.html">¿Dónde Estamos?</a>
           </li>
         </ul>
         </nav>
@@ -35,13 +53,13 @@
                   <img src="img/posicionamiento.jpg" class="img-fluid" alt="Sample project image" style="width: 450px; height: 300px;">
                   <a>
                     <div class="mask rgba-white-slight"></div>
-                  </a>
+                  </a>         
                 </div>
                 <div class="card-body pb-0">
                   <h4 class="font-weight-bold my-3">Posicionamiento Web</h4>
                   <p class="grey-text">Trabajos de posicionamiento web para que Google te muestre en las primeras posiciones.
                   </p>
-                  <button class="btn btn-dark btn-sm"><a href="#">Ver Trabajo</a></button>
+                  <button class="btn btn-dark btn-sm" data-toggle="modal" data-target="#myModal">Ver Trabajo</button>    
                 </div>
               </div>
               <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
@@ -73,6 +91,31 @@
               </div>
             </div>
         </div>
+        
+<!-- MODAL POSICIONAMIENTO WEB -->
+        
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3 text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
+                <br><br>
+                <h1>Modal with blur effect</h1>
+                <h2>Put here whatever you want here</h2>
+                <h4>For instance, a login form or an article content</h4>
+                <h4><kbd>esc</kbd> or click anyway to close</h4>
+                <hr>
+                <div class="alert alert-danger"><h4>You can add any html and css ;)</h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- MODAL LO SUBES LO VENDES -->
+   
+<!-- MODAL SAGASHITERU -->
+
+    
         <footer>
             <p class="miPie">Irene Álvarez-Nava González</p>
             <p class="miotroPie">2018 &nbsp;&nbsp;| &nbsp;&nbsp;<a href="#">Politica de Privacidad</a> &nbsp;<a href="#">Terminos y condiciones</a></p>
