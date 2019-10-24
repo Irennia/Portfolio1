@@ -1,5 +1,20 @@
+body.modal-open .miContenedor{
+                -webkit-filter: blur(7px);
+                -moz-filter: blur(15px);
+                -o-filter: blur(15px);
+                -ms-filter: blur(15px);
+                filter: blur(15px);
+            }
+  
+            .modal-backdrop {background: #f7f7f7;}
+
+            .close {
+                font-size: 50px;
+                display:block;
+            }
+
 a {
-    color: aliceblue !important;
+    color: aliceblue;
     text-decoration: none !important;
 }
 
@@ -7,4 +22,15 @@ a {
     margin-left: 10%;
     margin-top: 12%;
     width: 80%;
+}
+
+#myModal {
+    border: solid 2px yellow;
+    width: 100%;
+    height: 300px;
+    margin-top: 12%;
+}
+.container {
+        justify-content: center;
+        margin-right: 70px;
 }
