@@ -17,7 +17,6 @@
 .informacion p {
     text-align: center;
     font-size: 20px;
-    font-weight: bold;
     color: azure
 }
 
@@ -25,7 +24,6 @@
     margin-top: 10px;
     text-align: center;
     font-size: 20px;
-    font-weight: bold;
 }
 
 .formulario{
