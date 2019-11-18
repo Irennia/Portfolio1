@@ -1,0 +1,45 @@
+#formulario{
+    width: 70%;
+    justify-content: center;
+    margin-left: 14%;
+    margin-top: 7%;
+}
+
+.presupuestoTotal{
+    float: right;
+    margin-top: 20%;
+}
+.recogidaDatos{
+    float: left;
+}
+
+input.presupuesto_final{
+    width: 100px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+input.plazoMeses {
+    width: 145px;
+    border: solid 1px #d3d1d1;
+    border-radius: 3px;
+}
+
+div span{
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+div input {
+    margin-top: 10px;
+}
+
+select {
+    width: 130px;
+    height: 20px;
+}
+
+small {
+    font-size: 30px;
+}
