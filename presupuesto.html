@@ -7,6 +7,10 @@
         <link rel="stylesheet" type="text/css" href="css/presupuesto.css" media="screen">
         <link rel="stylesheet" type="text/css" href="css/piepagina.css" media="screen">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/presupuesto.js"></script>
+
     </head>
     <body style="background: #ada0a0;">
       <nav>
@@ -36,7 +40,7 @@
 
               <div class="form-group">
                 <span>Nombre</span>
-                <input type="text" class="form-control" id="nombre" placeholder="Introduzca Nombre" style="height: 25px;">
+                <input type="text" class="form-control" id="nombre" placeholder="Introduzca Nombre" style="height: 25px;" onchange="presupuestoTotal()">
               </div>
               <div class="form-group">
                 <span>Apellidos</span>
@@ -82,7 +86,7 @@
           <div class="form-group presupuestoTotal">
             <p style="font-size: 20px; font-weight: bold">Presupuesto Estimado</p>
             <small style="font-size: 10px; margin-left: 7px;">Es un presupuesto estimado, en función de la web puede aumentar o disminuir</small>
-            <input type="text" class="form-control presupuesto_final" id="presupuesto" value="€">
+            <input type="text" class="form-control presupuesto_final" id="presupuesto">
             
           </div>
           </form>
