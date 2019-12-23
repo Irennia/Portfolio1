@@ -14,9 +14,21 @@
 }
 
 input.presupuesto_final{
-    width: 100px;
+    width: 70px;
     height: 25px;
     margin-left: 5px;
+}
+
+input.presupuesto_finalW {
+    width: 70px;
+    height: 25px;
+    margin-left: 52px;
+}
+
+input.presupuesto_finalS {
+    width: 70px;
+    height: 25px;
+    margin-left: 47px;
 }
 
 input.plazoMeses {

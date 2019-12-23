@@ -34,13 +34,13 @@
         </nav>
         
         
-        <form action="presupuesto.html" id="formulario" method="post" value="presupuesto">
+        <form action="presupuesto.html" name="formulario" id="formulario" method="post" value="presupuesto">
              <div class="recogidaDatos">
               <h3 style="margin-bottom: 30px;">Datos</h3>
 
               <div class="form-group">
                 <span>Nombre</span>
-                <input type="text" class="form-control" id="nombre" placeholder="Introduzca Nombre" style="height: 25px;" onchange="presupuestoTotal()">
+                <input type="text" class="form-control" id="nombre" placeholder="Introduzca Nombre" style="height: 25px;">
               </div>
               <div class="form-group">
                 <span>Apellidos</span>
@@ -59,35 +59,45 @@
 
               <div class="form-group">
                <span>Tipo de Web</span>
-                <select id="OS">
-                   <option value="1">Web Corporativa (50€)</option> 
-                   <option value="2">Tienda Online (60€)</option> 
-                   <option value="3">OnePage (40€)</option>
-                   <option value="4">Buscador (60€)</option>
+                <select id="tipoWeb">
+                   <option value="">Elige una opción</option>
+                   <option value="50">Web Corporativa (50€)</option> 
+                   <option value="60">Tienda Online (60€)</option> 
+                   <option value="40">OnePage (40€)</option>
+                   <option value="60">Buscador (60€)</option>
                 </select>
                 </div>
-              <div class="form-group">
                 <span>Plazo en Meses</span>
-                <input type="number" class="plazoMeses" id="plazoEntrega" placeholder="&nbsp Introduzca Plazo" min="1" max="4"><br>
+                    <select id="plazos">
+                       <option value="">Elige un plazo</option> 
+                       <option value="0.05">1 mes</option> 
+                       <option value="0.10">2 meses</option> 
+                       <option value="0.15">3 meses</option>
+                       <option value="0.20">4 meses</option>
+                       <option value="0.20">> 4 meses</option>
+                    </select><br>
+                    <span style="font-size: 10px; margin-left: 5px; margin-top: -4px;">Marque el número de meses para la entrega en el caso de ser más de 4:</span><input type="textarea" id="plazos" value="" style="width: 60px; margin-top: -2px;"><br><br>
+
                 <small style="font-size: 10px; margin-left: 7px;">Se aplicará un descuento del 5% por cada mes de plazo, con un máximo del 20%</small>
-              </div>
               <div class="form-group" style="margin-top: 30px;">
                 <span>Marque las secciones deseadas en su web</span><br><br>
-                <input type="checkbox" class="checkbox-inline" id="seccion1" value="QuienesSomos" style="margin-right: 5px; margin-top: -4px;">Quienes Somos
-                <input type="checkbox" class="checkbox-inline" id="seccion2" value="DondeEstamos" style="margin-right: 5px; margin-top: -4px;">Donde Estamos
-                <input type="checkbox" class="checkbox-inline" id="seccion3" value="GaleriaFotos" style="margin-right: 5px; margin-top: -4px;">Galeria Fotos
-                <input type="checkbox" class="checkbox-inline" id="seccion4" value="eCommerce" style="margin-right: 5px; margin-top: -4px;">eCommerce
-                <input type="checkbox" class="checkbox-inline" id="seccion5" value="GestionInterna" style="margin-right: 5px; margin-top: -4px;">Gestión Interna
-                <input type="checkbox" class="checkbox-inline" id="seccion6" value="Noticias" style="margin-right: 5px; margin-top: -4px;">Noticias
-                <input type="checkbox" class="checkbox-inline" id="seccion7" value="Facebook" style="margin-right: 5px; margin-top: -4px;">Facebook
-                <input type="checkbox" class="checkbox-inline" id="seccion8" value="Twitter" style="margin-right: 5px; margin-top: -4px;">Twitter
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Quienes Somos
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Donde Estamos
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Galeria Fotos
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">eCommerce
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Gestión Interna
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Noticias
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Facebook
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Twitter
               </div>
             </div>
           <div class="form-group presupuestoTotal">
             <p style="font-size: 20px; font-weight: bold">Presupuesto Estimado</p>
-            <small style="font-size: 10px; margin-left: 7px;">Es un presupuesto estimado, en función de la web puede aumentar o disminuir</small>
-            <input type="text" class="form-control presupuesto_final" id="presupuesto">
-            
+            <small style="font-size: 10px; margin-left: 7px;">Es un presupuesto estimado, en función de la web puede aumentar o disminuir</small><br>
+            <label>Tipo Web</label><input type="text" class="presupuesto_finalW" id="web">&nbsp;&nbsp;€<br>
+            <label>Con Descuento (%)</label><input type="text" class="total presupuesto_final" id="plazosTotal" onchange="sumaTotal(this);">&nbsp;&nbsp;%<br>
+            <label>Secciones</label><input type="text" class="total presupuesto_finalS" id="seccionesTotal" onchange="sumaTotal(this);">&nbsp;&nbsp;€<br><br>
+            <label>Presupuesto Total</label><input type="text" class="presupuesto_final" id="prepTotal">&nbsp;&nbsp;€
           </div>
           </form>
           <!-- <div class="form-group form-check"> -->
