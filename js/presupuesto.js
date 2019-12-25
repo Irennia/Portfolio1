@@ -17,7 +17,7 @@
 var totalTipoWeb = 0;
 var descuentoPlazos= 0;
 var total = 0;
-var sumaT = 0;
+var sumatotal = 0;
 
 $(document).ready(function () {  
     
@@ -52,51 +52,32 @@ $(document).ready(function () {
                     $("#plazosTotal").val(descuentoPlazos);
 
                 })
-        })
-//        $("#plazos").change(function (e) {
-//                $('#plazos').each(function(){
-//                    var descuento = $(this).val();
-//                    var valor = $("#plazos").val();
-//                     if (descuento == "0.05")
-//                      descuentoPlazos += parseFloat(valor);
-//                     if (descuento == "0.10")
-//                      descuentoPlazos += parseFloat(valor);
-//                     if (descuento == "0.15")
-//                      descuentoPlazos += parseFloat(valor);
-//                    if (descuento == "0.20")
-//                      descuentoPlazos += parseFloat(valor);
-//            
-//                    $("#plazosTotal").val(descuentoPlazos);
-//
-//                })
-//        })
-        
+        })    
 });
 
-//$(document).ready(function1() {
-//    $(".total").change(function1(e) {
-//        $('.total').each(function1(){
-//            var cantidad = $(this).val();
-//
-//            var presu += cantidad;
-//
-//            $("#prepTotal").val(presu);
-//        })
-//    })
-//});
+//Suma al marcar y resta al desmarcar las secciones y sumamos con el resultado del descuento
 
     function sumar(valor) {
         total += valor;
         document.formulario.seccionesTotal.value = total;
+        
+        totalT = total + descuentoPlazos;
+        
+        //alert(totalT);
+        
+        $("#prepTotal").val(totalT);
     }
 
     function restar(valor) { 
         total -= valor;  
-        document.formulario.seccionesTotal.value = total; 
+        document.formulario.seccionesTotal.value = total;
+        
+        totalT = total + descuentoPlazos;
+        
+        $("#prepTotal").val(totalT);
     }
 
-    function sumaTotal(v) {
-        sumaT += v;
+    
+  
         
-        document.formulario.prepTotal.value = sumaT;
-    }
+    
