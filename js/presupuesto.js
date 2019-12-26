@@ -17,25 +17,25 @@
 var totalTipoWeb = 0;
 var descuentoPlazos= 0;
 var total = 0;
-var sumatotal = 0;
 
 $(document).ready(function () {  
-    
+    //Cojo el valor del select y lo muestro en el campo creado especifico para ver el precio por el tipo de web.
     $("#tipoWeb").change(function (e) {
             $('#tipoWeb').each(function(){
                 var precio = $(this).val();
                 var valor = $("#tipoWeb").val();
                  if (precio == "40")
-                  totalTipoWeb += parseInt(valor);
+                  totalTipoWeb = parseInt(valor);
                  if (precio == "50")
-                  totalTipoWeb += parseInt(valor);
+                  totalTipoWeb = parseInt(valor);
                  if (precio == "60")
-                  totalTipoWeb += parseInt(valor);
+                  totalTipoWeb = parseInt(valor);
 
                 $("#web").val(totalTipoWeb);
             })
         })
 
+    //Aquí cojo el valor del descuento y se lo aplico al tipo de web recogido arriba. Al mostrarlo, lo muestro con el precio total después de aplicar el descuento.
         $("#plazos").change(function (e) {
                 $('#plazos').each(function(){
                     var descuento = $(this).val();
@@ -50,12 +50,14 @@ $(document).ready(function () {
                       descuentoPlazos = valor / 1.20;
             
                     $("#plazosTotal").val(descuentoPlazos);
+                    $("#prepTotal").val(descuentoPlazos);
+                    
 
                 })
         })    
 });
 
-//Suma al marcar y resta al desmarcar las secciones y sumamos con el resultado del descuento
+//Suma al marcar y resta al desmarcar las secciones y sumamos con el resultado del descuento.
 
     function sumar(valor) {
         total += valor;
@@ -77,6 +79,11 @@ $(document).ready(function () {
         $("#prepTotal").val(totalT);
     }
 
+
+//En el siguiente modulo añadiré un mensaje de agradecimiento al enviar los formularios
+//    function gracias(){
+//        document.write('¡Gracias!');
+//    }
     
   
         

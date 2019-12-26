@@ -40,26 +40,26 @@
 
               <div class="form-group">
                 <span>Nombre</span>
-                <input type="text" class="form-control" id="nombre" placeholder="Introduzca Nombre" style="height: 25px;">
+                <input type="text" class="form-control" id="nombre" placeholder="Introduzca Nombre" style="height: 25px;" required>
               </div>
               <div class="form-group">
                 <span>Apellidos</span>
-                <input type="text" class="form-control" id="apellidos" placeholder="Introduzca Apellidos" style="height: 25px;">
+                <input type="text" class="form-control" id="apellidos" placeholder="Introduzca Apellidos" style="height: 25px;" required>
               </div>
               <div class="form-group">
                 <span>Teléfono de Contacto</span>
-                <input type="tel" class="form-control" id="telefono" placeholder="Introduzca Teléfono" style="height: 25px;">
+                <input type="tel" class="form-control" id="telefono" pattern="[0-9]{9}" title="Introduzca 9 dígitos" placeholder="Introduzca Teléfono" style="height: 25px;" required>
               </div>
               <div class="form-group">
                 <span>Email</span>
-                <input type="email" class="form-control" id="email" placeholder="Introduzca Email" style="height: 25px;">
+                <input type="email" class="form-control" id="email" placeholder="Introduzca Email" style="height: 25px;" required>
               </div>
 
               <h3 style="margin-top: 50px; margin-bottom: 30px;">La Web</h3>
 
               <div class="form-group">
                <span>Tipo de Web</span>
-                <select id="tipoWeb">
+                <select id="tipoWeb" required>
                    <option value="">Elige una opción</option>
                    <option value="50">Web Corporativa (50€)</option> 
                    <option value="60">Tienda Online (60€)</option> 
@@ -68,7 +68,7 @@
                 </select>
                 </div>
                 <span>Plazo en Meses</span>
-                    <select id="plazos">
+                    <select id="plazos" required>
                        <option value="">Elige un plazo</option> 
                        <option value="0.05">1 mes</option> 
                        <option value="0.10">2 meses</option> 
@@ -97,8 +97,11 @@
             <label>Tipo Web</label><input type="text" class="presupuesto_finalW" id="web">&nbsp;&nbsp;€<br>
             <label>Con Descuento (%)</label><input type="text" class="total presupuesto_final" id="plazosTotal">&nbsp;&nbsp;%<br>
             <label>Secciones</label><input type="text" class="total presupuesto_finalS" id="seccionesTotal">&nbsp;&nbsp;€<br><br>
-            <label>Presupuesto Total</label><input type="text" class="presupuesto_final" id="prepTotal">&nbsp;&nbsp;€
+            <label>Presupuesto Total</label><input type="text" class="presupuesto_final" id="prepTotal">&nbsp;&nbsp;€<br><br>
+            <input type="submit" class="btn btn-dark btn-sm" value="Enviar Presupuesto">
           </div>
+          
+          
           </form>
           <!-- <div class="form-group form-check"> -->
             <!-- <input type="checkbox" class="form-check-input" id="checkTerminos"> -->
