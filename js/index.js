@@ -1,11 +1,11 @@
 // Mensaje bienvenida página
 
-//$("#contenedor").html('index.html');
-//
-//function llamarAlert() {
-//        alert("Bienvenido a mi Portfolio!")
-//    }
-//    
-//
-//$(document).ready(function(){
-//    setTimeout(function(){llamarAlert()}, 5000)});
+$("#contenedor").html('index.html');
+
+function llamarAlert() {
+        alert("Bienvenido a mi Portfolio!")
+    }
+    
+
+$(document).ready(function(){
+    setTimeout(function(){llamarAlert()}, 5000)});
