@@ -10,52 +10,30 @@
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/presupuesto.js"></script>
-
     </head>
-    <body style="background: #ada0a0;">
-      <nav>
-       <ul class="navbar justify-content-center">
-          <li class="navbar-item">
-            <a class="navbar-link active" href="index.html">Inicio</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="portfolio.html">Portfolio</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="presupuesto.html">Presupuesto</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="contacto.html">Contacto</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="dondeEstamos.html">¿Dónde Estamos?</a>
-          </li>
-        </ul>
-        </nav>
-        
-        
+    <body>
         <form action="presupuesto.html" name="formulario" id="formulario" method="post" value="presupuesto">
              <div class="recogidaDatos">
-              <h3 style="margin-bottom: 30px;">Datos</h3>
+              <h3 id="datos">Datos</h3>
 
               <div class="form-group">
                 <span>Nombre</span>
-                <input type="text" class="form-control" id="nombre" placeholder="Introduzca Nombre" style="height: 25px;" required>
+                <input type="text" class="form-control" id="nombre" placeholder="Introduzca Nombre" required>
               </div>
               <div class="form-group">
                 <span>Apellidos</span>
-                <input type="text" class="form-control" id="apellidos" placeholder="Introduzca Apellidos" style="height: 25px;" required>
+                <input type="text" class="form-control" id="apellidos" placeholder="Introduzca Apellidos" required>
               </div>
               <div class="form-group">
                 <span>Teléfono de Contacto</span>
-                <input type="tel" class="form-control" id="telefono" pattern="[0-9]{9}" title="Introduzca 9 dígitos" placeholder="Introduzca Teléfono" style="height: 25px;" required>
+                <input type="tel" class="form-control" id="telefono" pattern="[0-9]{9}" title="Introduzca 9 dígitos" placeholder="Introduzca Teléfono" required>
               </div>
               <div class="form-group">
                 <span>Email</span>
-                <input type="email" class="form-control" id="email" placeholder="Introduzca Email" style="height: 25px;" required>
+                <input type="email" class="form-control" id="email" placeholder="Introduzca Email" required>
               </div>
 
-              <h3 style="margin-top: 50px; margin-bottom: 30px;">La Web</h3>
+              <h3 id="laWeb">La Web</h3>
 
               <div class="form-group">
                <span>Tipo de Web</span>
@@ -76,24 +54,24 @@
                        <option value="0.20">4 meses</option>
                        <option value="0.20">> 4 meses</option>
                     </select><br>
-                    <span style="font-size: 10px; margin-left: 5px; margin-top: -4px;">Marque el número de meses para la entrega en el caso de ser más de 4:</span><input type="textarea" id="plazos" value="" style="width: 60px; margin-top: -2px;"><br><br>
+                    <span id="numMeses">Marque el número de meses para la entrega en el caso de ser más de 4:</span><input type="textarea" id="plazosMeses" value=""><br><br>
 
-                <small style="font-size: 10px; margin-left: 7px;">Se aplicará un descuento del 5% por cada mes de plazo, con un máximo del 20%</small>
-              <div class="form-group" style="margin-top: 30px;">
+                <small id="smallMeses">Se aplicará un descuento del 5% por cada mes de plazo, con un máximo del 20%</small>
+              <div class="form-group" id="divSecciones">
                 <span>Marque las secciones deseadas en su web</span><br><br>
-                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Quienes Somos
-                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Donde Estamos
-                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Galeria Fotos
-                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">eCommerce
-                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Gestión Interna
-                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Noticias
-                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Facebook
-                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)" style="margin-right: 5px; margin-top: -4px;">Twitter
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)">Quienes Somos
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)">Donde Estamos
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)">Galeria Fotos
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)">eCommerce
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)">Gestión Interna
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)">Noticias
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)">Facebook
+                <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)">Twitter
               </div>
             </div>
           <div class="form-group presupuestoTotal">
-            <p style="font-size: 20px; font-weight: bold">Presupuesto Estimado</p>
-            <small style="font-size: 10px; margin-left: 7px;">Es un presupuesto estimado, en función de la web puede aumentar o disminuir</small><br>
+            <p id="pEstimado">Presupuesto Estimado</p>
+            <small id="smallEstimado">Es un presupuesto estimado, en función de la web puede aumentar o disminuir</small><br>
             <label>Tipo Web</label><input type="text" class="presupuesto_finalW" id="web">&nbsp;&nbsp;€<br>
             <label>Con Descuento (%)</label><input type="text" class="total presupuesto_final" id="plazosTotal">&nbsp;&nbsp;%<br>
             <label>Secciones</label><input type="text" class="total presupuesto_finalS" id="seccionesTotal">&nbsp;&nbsp;€<br><br>

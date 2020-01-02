@@ -1,3 +1,56 @@
+body {
+    background: #ada0a0;
+}
+
+
+
+h3#datos{
+    margin-bottom: 30px;
+}
+
+h3#laWeb{
+    margin-top: 50px; 
+    margin-bottom: 30px;
+}
+
+input.form-control{
+    height: 25px;
+}
+
+span#numMeses{
+    font-size: 10px; 
+    margin-left: 5px; 
+    margin-top: -4px;
+}
+
+small#smallMeses{
+    font-size: 10px; 
+    margin-left: 7px;
+}
+
+div#divSecciones{
+    margin-top: 30px;
+}
+
+input#secciones{
+    margin-right: 5px; 
+    margin-top: -4px;
+}
+
+input#plazosMeses{
+    width: 60px; 
+    margin-top: -2px;
+}
+
+p#pEstimado{
+    font-size: 20px; 
+    font-weight: bold
+}
+
+small#smallEstimado{
+    font-size: 10px; 
+    margin-left: 7px;
+}
 #formulario{
     width: 70%;
     justify-content: center;
@@ -8,9 +61,12 @@
 .presupuestoTotal{
     float: right;
     margin-top: 20%;
+    margin-right: -200px;
 }
 .recogidaDatos{
     float: left;
+    margin-left: -150px;
+    margin-top: 4%;
 }
 
 input.presupuesto_final{

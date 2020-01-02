@@ -1,24 +1,8 @@
-//function calculo(){
-//    
-//    var presuTotal = 0;
-//    var nombre = document.getElementById("nombre").value
-//    
-//    $("#presupuesto").val("#nombre").show
-//   //alert(nombre);
-//}
-
-//$(document).ready(function () {
-//    $("#nombre").keyup(function () {
-//        var value = $(this).val();
-//        $("#presupuesto").val(value);
-//    });
-//});
-
 var totalTipoWeb = 0;
 var descuentoPlazos= 0;
 var total = 0;
 
-$(document).ready(function () {  
+$(document).ready(function () { 
     //Cojo el valor del select y lo muestro en el campo creado especifico para ver el precio por el tipo de web.
     $("#tipoWeb").change(function (e) {
             $('#tipoWeb').each(function(){
