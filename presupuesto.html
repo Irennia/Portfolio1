@@ -32,9 +32,8 @@
                 <span>Email</span>
                 <input type="email" class="form-control" id="email" placeholder="Introduzca Email" required>
               </div>
-
+            
               <h3 id="laWeb">La Web</h3>
-
               <div class="form-group">
                <span>Tipo de Web</span>
                 <select id="tipoWeb" required>
@@ -45,6 +44,7 @@
                    <option value="60">Buscador (60€)</option>
                 </select>
                 </div>
+                <div class="form-group">
                 <span>Plazo en Meses</span>
                     <select id="plazos" required>
                        <option value="">Elige un plazo</option> 
@@ -53,10 +53,12 @@
                        <option value="0.15">3 meses</option>
                        <option value="0.20">4 meses</option>
                        <option value="0.20">> 4 meses</option>
-                    </select><br>
-                    <span id="numMeses">Marque el número de meses para la entrega en el caso de ser más de 4:</span><input type="textarea" id="plazosMeses" value=""><br><br>
+                    </select><br><br>
+                    <span id="numMeses">Marque el número de meses para la entrega en el caso de ser más de 4:</span><input type="textarea" id="plazosMeses" value=""><br>
+                 
 
-                <small id="smallMeses">Se aplicará un descuento del 5% por cada mes de plazo, con un máximo del 20%</small>
+                    <small id="smallMeses">Se aplicará un descuento del 5% por cada mes de plazo, con un máximo del 20%</small>
+                </div>
               <div class="form-group" id="divSecciones">
                 <span>Marque las secciones deseadas en su web</span><br><br>
                 <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)">Quienes Somos
@@ -69,6 +71,7 @@
                 <input type="checkbox" class="checkbox-inline" name="secciones" id="secciones" value="400" onClick="if (this.checked) sumar(400); else restar(400)">Twitter
               </div>
             </div>
+            
           <div class="form-group presupuestoTotal">
             <p id="pEstimado">Presupuesto Estimado</p>
             <small id="smallEstimado">Es un presupuesto estimado, en función de la web puede aumentar o disminuir</small><br>
