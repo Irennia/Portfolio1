@@ -25,4 +25,10 @@ $(document).ready(function(){
     $('#donde').on('click', function(){
         $('#contenido').load('../dondeEstamos.html');
     });
+    $('#login').on('click', function(){
+        $('#contenido').load('../login.html');
+    });
+    $('#noticias').on('click', function(){
+        $('#contenido').load('../login.html');
+    });
 });
