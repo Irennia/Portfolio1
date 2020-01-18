@@ -8,7 +8,7 @@ $("#contenedor").html('index.html');
 
     
 $(document).ready(function(){
-    setTimeout(function(){llamarAlert()}, 5000)
+    //setTimeout(function(){llamarAlert()}, 5000)
         
 //    $('#inicio').on('click', function(){
 //        $('#contenido').load('../index.html');
